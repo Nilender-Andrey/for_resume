@@ -1,0 +1,140 @@
+.leftAnimation1 {
+  animation: leftAnimation1 2s linear 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+.leftAnimation2 {
+  animation: leftAnimation2 2s linear 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+.leftAnimation3 {
+  animation: leftAnimation3 2s linear 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+@keyframes leftAnimation1 {
+  0% {
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: rotateY(-120deg) translateZ(507px) translateX(-293px);
+  }
+}
+@keyframes leftAnimation2 {
+  0% {
+    transform: rotateY(-120deg) translateZ(507px) translateX(-293px);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotateY(-240deg) translateZ(516px) translateX(307px);
+  }
+}
+@keyframes leftAnimation3 {
+  0% {
+    transform: rotateY(-240deg) translateZ(516px) translateX(307px);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotateY(-360deg) translateZ(0px);
+  }
+}
+
+.scaleAnimation1 {
+  animation: scaleAnimation1 5s linear 1;
+  animation-delay: 0.5s;
+}
+
+@keyframes scaleAnimation1 {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+
+  90% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.rightAnimation1 {
+  animation: rightAnimation1 2s linear 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+.rightAnimation2 {
+  animation: rightAnimation2 2s linear 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+.rightAnimation3 {
+  animation: rightAnimation3 2s linear 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+@keyframes rightAnimation1 {
+  0% {
+    transform: rotateY(-360deg) translateZ(0px);
+  }
+  /* 10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  } */
+
+  100% {
+    transform: rotateY(-240deg) translateZ(507px) translateX(293px);
+  }
+}
+@keyframes rightAnimation2 {
+  0% {
+    transform: rotateY(-240deg) translateZ(507px) translateX(293px);
+  }
+  /* 10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  } */
+  100% {
+    transform: rotateY(-120deg) translateZ(516px) translateX(-307px);
+  }
+}
+@keyframes rightAnimation3 {
+  0% {
+    transform: rotateY(-120deg) translateZ(516px) translateX(-307px);
+  }
+  /* 10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  } */
+  100% {
+    transform: rotateY(-0deg) translateZ(0px);
+  }
+}
