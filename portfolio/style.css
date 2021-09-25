@@ -16,7 +16,9 @@ body {
   position: relative;
   min-height: 100vh;
   height: 1px;
+
   background: url('./img/fon.jpg') no-repeat center;
+
   backdrop-filter: blur(2px);
 
   overflow: hidden;
