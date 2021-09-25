@@ -1,7 +1,3 @@
-window.onload = function () {
-  console.log('Привет');
-};
-
 function turnRight() {
   const face = document.querySelector('.face');
   const left = document.querySelector('.left');
