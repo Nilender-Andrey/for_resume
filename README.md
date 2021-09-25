@@ -1,1 +1,1 @@
-https://nilender-andrey.github.io/for_resume/portfolio/index.html
+https://nilender-andrey.github.io/portfolio/portfolio/index.html
