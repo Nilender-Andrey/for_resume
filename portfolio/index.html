@@ -32,11 +32,14 @@
       <section id="my-contacts" class="main__page left">
         <button class="section__btn_left">
           <div class="section__btn_left_top"></div>
-          <span class="section__btn_span-left">Работы</span>
+          <span class="section__btn_span-left"> Работы </span>
           <div class="section__btn_left_bottom"></div>
         </button>
         <div class="main__page_my-contacts page-content">
           <h2>Контактная информация</h2>
+          <p class="title">Привет! Если вас заинтетесовало мое резюме, связаться со мной можно по данним ниже.
+            Предпочтительно по
+            телефону.</p>
           <div class="photo-contacts">
             <div class="photo-contacts__img">
 
@@ -44,13 +47,19 @@
 
             </div>
             <div class="photo-contacts__text">
-              <p>тел.: 8 (917) 115 18 30</p>
+
+
+              <a class="textLink" href="tel:89171151830">тел.: <span class="spanLink">8 (917) 115 18 30</span></a>
+              <a class="textLink" href="mailto:nilenderav@mail.ru">Email: <span
+                  class="spanLink">nilenderav@mail.ru</span></a>
+              <a class="textLink" href="https://github.com/Nilender-Andrey">Мой GitHub</a>
+
             </div>
           </div>
         </div>
         <button class="section__btn_right">
           <div class="section__btn_right_top"></div>
-          <span class="section__btn_span-right">Навыки</span>
+          <span class="section__btn_span-right"> Навыки </span>
           <div class="section__btn_right_bottom"></div>
         </button>
       </section>
@@ -58,15 +67,55 @@
       <section id="about-me" class="main__page face">
         <button class="section__btn_left">
           <div class="section__btn_left_top"></div>
-          <span class="section__btn_span-left">Связь</span>
+          <span class="section__btn_span-left"> Связь </span>
           <div class="section__btn_left_bottom"></div>
         </button>
+
         <div class="main__page_about-me page-content">
-          <h2>Сертификаты, навыки</h2>
+          <div class="page-content__wrap">
+
+            <section class="certificates-wrap">
+              <h3>Сертификаты</h3>
+              <div class="certificates">
+                <div class="certificate">
+                  <a class="certificate__link" href="https://app.rs.school/certificate/9t3d17an" target="__blank"><img
+                      class="certificate__img" src="./img/2021-09-26_19-14-50.png" alt="certificate javascript"></a>
+
+                </div>
+
+                <div class="certificate">
+                  <a class="certificate__link"
+                    href="https://itgid.info/certificate/view?Certificate%5Buid%5D=ptqs34u9u6" target="__blank"><img
+                      class="certificate__img" src="./img/08_ptqs34u9u6.jpg" alt="certificate react"></a>
+                </div>
+
+              </div>
+            </section>
+            <section class="skills-wrap">
+              <h3>С чем работал:</h3>
+
+              <div class="skills">
+                <img class="skills-logo" src="./img/HTML5.png" alt="logo HTML5">
+                <img class="skills-logo" src="./img/CSS3.png" alt="logo CSS">
+                <img class="skills-logo" src="./img/js.png" alt="logo javascript">
+                <img class="skills-logo" src="./img/reactJS.png" alt="logo ReactJS">
+                <img class="skills-logo" src="./img/redux.png" alt="logo redux">
+                <img class="skills-logo" src="./img/webpack2.png" alt="logo webpack">
+                <img class="skills-logo" src="./img/gitHub.png" alt="logo github">
+                <img class="skills-logo" src="./img/chakra.png" alt="logo chakra">
+                <img class="skills-logo" src="./img/bootstrap.png" alt="logo bootstrap">
+                <img class="skills-logo" src="./img/sass.png" alt="logo sass">
+              </div>
+
+
+            </section>
+
+
+          </div>
         </div>
         <button class="section__btn_right">
           <div class="section__btn_right_top"></div>
-          <span class="section__btn_span-right">Работы</span>
+          <span class="section__btn_span-right"> Работы </span>
           <div class="section__btn_right_bottom"></div>
         </button>
       </section>
@@ -74,13 +123,63 @@
       <section id="my-works" class="main__page right">
         <button class="section__btn_left">
           <div class="section__btn_left_top"></div>
-          <span class="section__btn_span-left">Навыки</span>
+          <span class="section__btn_span-left"> Навыки </span>
           <div class="section__btn_left_bottom"></div>
         </button>
-        <div class="main__page_my-works page-content">Мои работы</div>
+        <div class="main__page_my-works page-content">
+          <h3>Мои работы</h3>
+          <div class="my-works">
+            <div class="my-works__wrap">
+              <a class="work" target="__blank"
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/english-for-kids-base/dist/"><img
+                  class="work__img" src="./img/2021-09-27_18-38-59.jpg" alt="English for kids">
+                <p class="work__text">English for kids <span class="work__span">оффлайн версия игровой программы для
+                    изучения английских слов</span> </p>
+              </a>
+              <a class="work" target="__blank"
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/english-for-kids-admin-panel/dist/"><img
+                  class="work__img" src="./img/2021-09-27_18-38-59.jpg" alt="English for kids + admin panel">
+                <p class="work__text">English for kids <span class="work__span">онлайн версия игровой программы для
+                    изучения английских слов, добавлена админка и сервер(расположен на басплатном хосте, поэтому запускается 20-30сек.)</span> </p>
+              </a>
+            </div>
+
+            <div class="my-works__wrap">
+              <a class="work" target="__blank"
+                href="https://nilender-andrey.github.io/react_pages/react-redux/#/"><img
+                  class="work__img" src="./img/2021-09-27_21-16-07.jpg" alt="Rick and Morty">
+                <p class="work__text">Rick and Morty <span class="work__span">страничка по персонажам одноименного сериала</span> </p>
+              </a>
+              <a class="work" target="__blank"
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/match-match-game/dist/"><img
+                  class="work__img" src="./img/match_match_game.jpg" alt="Find a couple">
+                <p class="work__text">Найди пару <span class="work__span">игра. </span> </p>
+              </a>
+            </div>
+
+            <div class="my-works__wrap">
+              <a class="work" target="__blank"
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/online-zoo/"><img
+                  class="work__img" src="./img/online_zoo.jpg" alt="Online zoo">
+                <p class="work__text">Online zoo <span class="work__span">сайт про животных (без мобильной версии)</span> </p>
+              </a>
+              <a class="work" target="__blank"
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/match-match-game/dist/"><img
+                  class="work__img" src="./img/match_match_game.jpg" alt="Find a couple">
+                <p class="work__text">Найди пару <span class="work__span">игра. </span> </p>
+              </a>
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
         <button class="section__btn_right">
           <div class="section__btn_right_top"></div>
-          <span class="section__btn_span-right">Связь</span>
+          <span class="section__btn_span-right"> Связь </span>
           <div class="section__btn_right_bottom"></div>
         </button>
       </section>

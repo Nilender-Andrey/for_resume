@@ -107,7 +107,7 @@ function removHeaderAndFooter() {
     headerWrap.parentElement.classList.remove('remove-header');
     footer.classList.remove('remove-footer');
     footer.firstElementChild.classList.remove('remove-footer-wrap');
-  }, 3700);
+  }, 2800);
 }
 
 function pushBack() {
@@ -121,5 +121,5 @@ function pushBack() {
   setTimeout(() => {
     mainWrap.classList.remove('scaleAnimation1');
     bodyWrap.classList.add('body-wrap--hide');
-  }, 5500);
+  }, 3150);
 }
