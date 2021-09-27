@@ -1,17 +1,22 @@
+:root {
+  --animation-time: 1s;
+  --animation-delay: 1s;
+}
+
 .leftAnimation1 {
-  animation: leftAnimation1 2s linear 1;
+  animation: leftAnimation1 var(--animation-time) linear 1;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  animation-delay: var(--animation-delay);
 }
 .leftAnimation2 {
-  animation: leftAnimation2 2s linear 1;
+  animation: leftAnimation2 var(--animation-time) linear 1;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  animation-delay: var(--animation-delay);
 }
 .leftAnimation3 {
-  animation: leftAnimation3 2s linear 1;
+  animation: leftAnimation3 var(--animation-time) linear 1;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  animation-delay: var(--animation-delay);
 }
 
 @keyframes leftAnimation1 {
@@ -59,7 +64,7 @@
 }
 
 .scaleAnimation1 {
-  animation: scaleAnimation1 5s linear 1;
+  animation: scaleAnimation1 2s linear 1;
   animation-delay: 0.5s;
 }
 
@@ -80,31 +85,25 @@
 }
 
 .rightAnimation1 {
-  animation: rightAnimation1 2s linear 1;
+  animation: rightAnimation1 var(--animation-time) linear 1;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  animation-delay: var(--animation-delay);
 }
 .rightAnimation2 {
-  animation: rightAnimation2 2s linear 1;
+  animation: rightAnimation2 var(--animation-time) linear 1;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  animation-delay: var(--animation-delay);
 }
 .rightAnimation3 {
-  animation: rightAnimation3 2s linear 1;
+  animation: rightAnimation3 var(--animation-time) linear 1;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  animation-delay: var(--animation-delay);
 }
 
 @keyframes rightAnimation1 {
   0% {
     transform: rotateY(-360deg) translateZ(0px);
   }
-  /* 10% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.6;
-  } */
 
   100% {
     transform: rotateY(-240deg) translateZ(507px) translateX(293px);
@@ -114,12 +113,7 @@
   0% {
     transform: rotateY(-240deg) translateZ(507px) translateX(293px);
   }
-  /* 10% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.6;
-  } */
+
   100% {
     transform: rotateY(-120deg) translateZ(516px) translateX(-307px);
   }
@@ -128,12 +122,7 @@
   0% {
     transform: rotateY(-120deg) translateZ(516px) translateX(-307px);
   }
-  /* 10% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.6;
-  } */
+
   100% {
     transform: rotateY(-0deg) translateZ(0px);
   }
