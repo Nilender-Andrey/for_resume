@@ -16,16 +16,20 @@
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
+html,
 body {
   position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
   min-height: 100vh;
   height: 1px;
 
   background: url('./img/fon.jpg') repeat-x center;
 
   backdrop-filter: blur(2px);
-
-  overflow: hidden;
 }
 
 .body-wrap {
@@ -38,6 +42,19 @@ body {
 }
 .body-wrap--hide {
   display: none;
+}
+
+.name-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.name {
+  color: #ed8936;
+  font-size: 28px;
 }
 
 h2,
@@ -210,7 +227,7 @@ h3 {
 .section__btn_right {
   position: relative;
   display: block;
-  height: 30px;
+  height: 40px;
   width: 30px;
   background-color: transparent;
   border: none;
@@ -221,9 +238,11 @@ h3 {
 .section__btn_left_top,
 .section__btn_left_bottom {
   position: absolute;
-  width: 100%;
+  width: 75%;
   height: 2px;
   top: 53%;
+  left: 5px;
+
   background-color: var(--arrows-сolor);
   transform-origin: left center;
   transform: rotate(-45deg);
@@ -248,7 +267,7 @@ h3 {
 .section__btn_right_top,
 .section__btn_right_bottom {
   position: absolute;
-  width: 100%;
+  width: 75%;
   height: 2px;
   top: 49%;
   background-color: var(--arrows-сolor);
@@ -274,6 +293,7 @@ h3 {
 .section__btn_span-left,
 .section__btn_span-right {
   position: relative;
+  z-index: 10;
 
   color: transparent;
 
@@ -296,7 +316,7 @@ h3 {
 .section__btn_right:hover .section__btn_span-right {
   color: white;
   background-color: #ed8936;
-  right: 70px;
+  right: 85px;
   transition: all 0.3s linear;
 }
 
@@ -305,6 +325,10 @@ h3 {
   background-color: #ed8936;
   left: 30px;
   transition: all 0.3s linear;
+}
+
+.section__btn_right:hover .section__btn_span-right--contacts {
+  right: 110px;
 }
 
 .page-content {
@@ -318,6 +342,17 @@ h3 {
   width: calc(100% - 80px);
   height: 100%;
 }
+
+/********* my-contacts ********/
+.main__page_my-contacts {
+  overflow-x: hidden;
+}
+
+.main__page_my-contacts::-webkit-scrollbar {
+  width: 0;
+}
+
+/******************************/
 
 /********* about-me ***********/
 
@@ -377,7 +412,7 @@ h3 {
 .photo-contacts {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   width: 100%;
   max-height: 300px;
@@ -429,6 +464,8 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  text-decoration: none;
 }
 
 .work__img-wrap {
@@ -446,7 +483,7 @@ h3 {
   gap: 20px;
 
   width: 100%;
-  height: 100%;
+  height: 98%;
   padding: 20px;
 
   border-radius: 10px;
@@ -542,6 +579,7 @@ h3 {
   color: #3182ce;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 /*******************************************************/
@@ -662,6 +700,9 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .name {
+    display: inline-block;
+  }
   .burger-btn {
     display: block;
   }
