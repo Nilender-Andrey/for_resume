@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   height: 1px;
 
-  background: url('./img/fon.jpg') no-repeat center;
+  background: url('./img/fon.jpg') repeat-x center;
 
   backdrop-filter: blur(2px);
 
@@ -103,7 +103,7 @@ h3 {
 
 .remove-logo {
   transition: left 0.6s linear;
-  left: -20%;
+  left: -30%;
 }
 .header__btn-wrap {
   position: absolute;
@@ -129,7 +129,7 @@ h3 {
 
   margin-right: 10px;
   color: white;
-  background-color: inherit;
+  background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
@@ -143,6 +143,7 @@ h3 {
 }
 .btn-active {
   color: var(--hover-сolor);
+  pointer-events: none;
 }
 
 /***************************************/
@@ -430,6 +431,42 @@ h3 {
   justify-content: flex-start;
 }
 
+.work__img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.work__technologies-used {
+  position: absolute;
+  top: -100%;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  border-radius: 10px;
+
+  background-color: #00000080;
+
+  transition: top 0.3s;
+}
+.work__technologies-used_text {
+  width: 100%;
+
+  font-weight: 400;
+  color: white;
+}
+
+.work__img-wrap:hover .work__technologies-used {
+  top: 0;
+  transition: top 0.3s;
+}
+
 .work__img {
   width: 100%;
   border-radius: 10px;
@@ -507,6 +544,106 @@ h3 {
   margin-bottom: 20px;
 }
 
+/*******************************************************/
+
+.burger-btn {
+  position: absolute;
+  right: 20px;
+  z-index: 5;
+
+  display: none;
+
+  width: 50px;
+  height: 35px;
+
+  cursor: pointer;
+
+  transition: right 0.6s linear 0.6s;
+}
+
+.remove-burger-btn {
+  transition: right 0.6s linear;
+  right: -30%;
+}
+
+.burger-btn::before,
+.burger-btn::after,
+.burger-btn span {
+  position: absolute;
+  left: 0;
+  height: 15%;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  border-radius: 5px;
+  background-color: #ed8936;
+}
+
+.burger-btn::before,
+.burger-btn::after {
+  content: '';
+}
+
+.burger-btn::before {
+  top: 0;
+}
+.burger-btn::after {
+  bottom: 0;
+}
+.burger-btn:hover::before {
+  top: 5px;
+}
+.burger-btn:hover::after {
+  bottom: 5px;
+}
+
+.burger-btn span {
+  top: 50%;
+  transform: scale(1) translate(0px, -50%);
+}
+.burger-btn._active span {
+  transform: scale(0) translate(0px, -50%);
+}
+.burger-btn._active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+  background-color: #ed8936;
+}
+.burger-btn._active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+  background-color: #ed8936;
+}
+
+.header__btn-burger {
+  position: absolute;
+  top: 70px;
+  z-index: 20;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  background-color: #000000b8;
+  padding: 10px;
+  gap: 30px;
+
+  transform-origin: right top;
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+.header__btn-burger._active {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.header__btn-burger button {
+  margin-right: 0px;
+}
+
+/*******************************************************/
+
 @media (max-width: 920px) {
   .my-works__wrap {
     flex-direction: column;
@@ -525,6 +662,18 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .burger-btn {
+    display: block;
+  }
+
+  .header__btn-wrap {
+    display: none;
+  }
+
+  .header__btn-burger {
+    display: flex;
+  }
+
   .page-content {
     padding: 0;
   }
@@ -554,5 +703,9 @@ h3 {
 
   .work {
     margin-bottom: 30px;
+  }
+  .photo-contacts__img {
+    margin-right: 0px;
+    margin-bottom: 0px;
   }
 }

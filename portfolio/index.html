@@ -18,18 +18,24 @@
       <div class="header__logo">
         АН
       </div>
+      <div class="burger-btn"><span class="burger-btn_span"></span></div>
       <div class="header__btn-wrap">
-        <button class="header__btn  header__btn_my-contacts">Контактная информация</button>
-        <button class="header__btn btn-active header__btn_about-me">Сертификаты, навыки</button>
+        <button class="header__btn btn-active header__btn_my-contacts">Контактная информация</button>
+        <button class="header__btn  header__btn_about-me">Сертификаты, навыки</button>
         <button class="header__btn header__btn_my-works">Мои работы</button>
       </div>
+    </div>
+    <div class="header__btn-burger">
+      <button class="header__btn btn-active header__btn_my-contacts">Контактная информация</button>
+      <button class="header__btn  header__btn_about-me">Сертификаты, навыки</button>
+      <button class="header__btn header__btn_my-works">Мои работы</button>
     </div>
   </header>
 
 
   <main class="main">
     <div class="main-wrap">
-      <section id="my-contacts" class="main__page left">
+      <section id="my-contacts" class="main__page face">
         <button class="section__btn_left">
           <div class="section__btn_left_top"></div>
           <span class="section__btn_span-left"> Работы </span>
@@ -64,7 +70,7 @@
         </button>
       </section>
 
-      <section id="about-me" class="main__page face">
+      <section id="about-me" class="main__page right">
         <button class="section__btn_left">
           <div class="section__btn_left_top"></div>
           <span class="section__btn_span-left"> Связь </span>
@@ -101,7 +107,7 @@
                 <img class="skills-logo" src="./img/reactJS.png" alt="logo ReactJS">
                 <img class="skills-logo" src="./img/redux.png" alt="logo redux">
                 <img class="skills-logo" src="./img/webpack2.png" alt="logo webpack">
-                <img class="skills-logo" src="./img/gitHub.png" alt="logo github">
+                <img class="skills-logo" src="./img/github.png" alt="logo github">
                 <img class="skills-logo" src="./img/chakra.png" alt="logo chakra">
                 <img class="skills-logo" src="./img/bootstrap.png" alt="logo bootstrap">
                 <img class="skills-logo" src="./img/sass.png" alt="logo sass">
@@ -120,7 +126,7 @@
         </button>
       </section>
 
-      <section id="my-works" class="main__page right">
+      <section id="my-works" class="main__page left">
         <button class="section__btn_left">
           <div class="section__btn_left_top"></div>
           <span class="section__btn_span-left"> Навыки </span>
@@ -130,50 +136,96 @@
           <h3>Мои работы</h3>
           <div class="my-works">
             <div class="my-works__wrap">
+
               <a class="work" target="__blank"
-                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/english-for-kids-base/dist/"><img
-                  class="work__img" src="./img/2021-09-27_18-38-59.jpg" alt="English for kids">
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/english-for-kids-base/dist/">
+                <div class="work__img-wrap">
+                  <img class="work__img" src="./img/2021-09-27_18-38-59.jpg" alt="English for kids">
+                  <div class="work__technologies-used">
+                    <p class="work__technologies-used_text">TypeScript</p>
+                    <p class="work__technologies-used_text">SCSS</p>
+                    <p class="work__technologies-used_text">Webpack</p>
+                  </div>
+                </div>
                 <p class="work__text">English for kids <span class="work__span">оффлайн версия игровой программы для
                     изучения английских слов</span> </p>
               </a>
+
               <a class="work" target="__blank"
-                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/english-for-kids-admin-panel/dist/"><img
-                  class="work__img" src="./img/2021-09-27_18-38-59.jpg" alt="English for kids + admin panel">
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/english-for-kids-admin-panel/dist/">
+                <div class="work__img-wrap">
+                  <img class="work__img" src="./img/2021-09-27_18-38-59.jpg" alt="English for kids + admin panel">
+                  <div class="work__technologies-used">
+                    <p class="work__technologies-used_text">TypeScript</p>
+                    <p class="work__technologies-used_text">SCSS</p>
+                    <p class="work__technologies-used_text">Webpack</p>
+                    <p class="work__technologies-used_text">NodeJS</p>
+                    <p class="work__technologies-used_text">Express</p>
+                  </div>
+                </div>
                 <p class="work__text">English for kids <span class="work__span">онлайн версия игровой программы для
-                    изучения английских слов, добавлена админка и сервер(расположен на басплатном хосте, поэтому запускается 20-30сек.)</span> </p>
+                    изучения английских слов, добавлена админка и сервер(расположен на басплатном хосте, поэтому
+                    запускается 20-30сек.)</span> </p>
               </a>
+
             </div>
 
             <div class="my-works__wrap">
-              <a class="work" target="__blank"
-                href="https://nilender-andrey.github.io/react_pages/react-redux/#/"><img
-                  class="work__img" src="./img/2021-09-27_21-16-07.jpg" alt="Rick and Morty">
-                <p class="work__text">Rick and Morty <span class="work__span">страничка по персонажам одноименного сериала</span> </p>
+              <a class="work" target="__blank" href="https://nilender-andrey.github.io/react_pages/react-redux/#/">
+                <div class="work__img-wrap">
+                  <img class="work__img" src="./img/2021-09-27_21-16-07.jpg" alt="Rick and Morty">
+                  <div class="work__technologies-used">
+                    <p class="work__technologies-used_text">TypeScript</p>
+                    <p class="work__technologies-used_text">React</p>
+                    <p class="work__technologies-used_text">Redux</p>
+                    <p class="work__technologies-used_text">Webpack</p>
+                    <p class="work__technologies-used_text">SCSS</p>
+                  </div>
+                </div>
+                <p class="work__text">Rick and Morty <span class="work__span">страничка с персонажам одноименного
+                    сериала</span> </p>
               </a>
               <a class="work" target="__blank"
-                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/match-match-game/dist/"><img
-                  class="work__img" src="./img/match_match_game.jpg" alt="Find a couple">
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/match-match-game/dist/">
+                <div class="work__img-wrap">
+                  <img class="work__img" src="./img/match_match_game.jpg" alt="Find a couple">
+                  <div class="work__technologies-used">
+                    <p class="work__technologies-used_text">TypeScript</p>
+                    <p class="work__technologies-used_text">SCSS</p>
+                    <p class="work__technologies-used_text">Webpack</p>
+                  </div>
+                </div>
                 <p class="work__text">Найди пару <span class="work__span">игра. </span> </p>
               </a>
             </div>
 
             <div class="my-works__wrap">
               <a class="work" target="__blank"
-                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/online-zoo/"><img
-                  class="work__img" src="./img/online_zoo.jpg" alt="Online zoo">
-                <p class="work__text">Online zoo <span class="work__span">сайт про животных (без мобильной версии)</span> </p>
+                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/online-zoo/">
+                <div class="work__img-wrap">
+                  <img class="work__img" src="./img/online_zoo.jpg" alt="Online zoo">
+                  <div class="work__technologies-used">
+                    <p class="work__technologies-used_text">Vanilla js</p>
+                    <p class="work__technologies-used_text">Vanilla css</p>
+                  </div>
+                </div>
+                <p class="work__text">Online zoo <span class="work__span">сайт про животных (без мобильной
+                    версии)</span> </p>
               </a>
+
               <a class="work" target="__blank"
-                href="https://rolling-scopes-school.github.io/nilender-andrey-JSFE2021Q1/match-match-game/dist/"><img
-                  class="work__img" src="./img/match_match_game.jpg" alt="Find a couple">
-                <p class="work__text">Найди пару <span class="work__span">игра. </span> </p>
+                href="https://nilender-andrey.github.io/Make-React-Apps/paper_rock_scissors/">
+                <div class="work__img-wrap">
+                  <img class="work__img" src="./img/paper_rock_scissors.jpg" alt="Paper rock scissors">
+                  <div class="work__technologies-used">
+                    <p class="work__technologies-used_text">TypeScript</p>
+                    <p class="work__technologies-used_text">React</p>
+
+                  </div>
+                </div>
+                <p class="work__text">Камень ножницы бумага <span class="work__span">маленькая игра. </span> </p>
               </a>
             </div>
-
-
-
-
-
 
           </div>
         </div>
