@@ -68,25 +68,41 @@ document.querySelector('.main-wrap').onclick = (event) => {
 document.querySelector('.header').onclick = (event) => {
   const pressedElClassList = event.target.classList;
 
-  if (pressedElClassList.contains('header__btn')) {
-    removHeaderAndFooter();
-    const face = document.querySelector('.face');
-    const headerBtn = document.querySelectorAll('.header__btn');
+  const burgerBtn = document.querySelector('.burger-btn');
+  const headerBtnBurger = document.querySelector('.header__btn-burger');
 
-    headerBtn.forEach((item) => item.classList.remove('btn-active'));
-    pressedElClassList.add('btn-active');
+  if (
+    pressedElClassList.contains('burger-btn') ||
+    pressedElClassList.contains('burger-btn_span')
+  ) {
+    burgerBtn.classList.toggle('_active');
+    headerBtnBurger.classList.toggle('_active');
+  } else {
+    if (pressedElClassList.contains('header__btn')) {
+      removHeaderAndFooter();
+      const face = document.querySelector('.face');
+      const headerBtn = document.querySelectorAll('.header__btn');
 
-    if (pressedElClassList.contains('header__btn_my-contacts')) {
-      if (face.id === 'about-me') turnLeft();
-      if (face.id === 'my-works') turnRight();
-    }
-    if (pressedElClassList.contains('header__btn_about-me')) {
-      if (face.id === 'my-contacts') turnRight();
-      if (face.id === 'my-works') turnLeft();
-    }
-    if (pressedElClassList.contains('header__btn_my-works')) {
-      if (face.id === 'about-me') turnRight();
-      if (face.id === 'my-contacts') turnLeft();
+      headerBtn.forEach((item) => item.classList.remove('btn-active'));
+      pressedElClassList.add('btn-active');
+
+      if (burgerBtn && headerBtnBurger) {
+        burgerBtn.classList.toggle('_active');
+        headerBtnBurger.classList.toggle('_active');
+      }
+
+      if (pressedElClassList.contains('header__btn_my-contacts')) {
+        if (face.id === 'about-me') turnLeft();
+        if (face.id === 'my-works') turnRight();
+      }
+      if (pressedElClassList.contains('header__btn_about-me')) {
+        if (face.id === 'my-contacts') turnRight();
+        if (face.id === 'my-works') turnLeft();
+      }
+      if (pressedElClassList.contains('header__btn_my-works')) {
+        if (face.id === 'about-me') turnRight();
+        if (face.id === 'my-contacts') turnLeft();
+      }
     }
   }
 };
@@ -94,6 +110,7 @@ document.querySelector('.header').onclick = (event) => {
 function removHeaderAndFooter() {
   const headerWrap = document.querySelector('.header-wrap');
   const footer = document.querySelector('.footer');
+  const burgerBtn = document.querySelector('.burger-btn');
 
   headerWrap.firstElementChild.classList.add('remove-logo');
   headerWrap.lastElementChild.classList.add('remove-menu');
@@ -101,12 +118,20 @@ function removHeaderAndFooter() {
   footer.classList.add('remove-footer');
   footer.firstElementChild.classList.add('remove-footer-wrap');
 
+  if (burgerBtn) {
+    burgerBtn.classList.add('remove-burger-btn');
+  }
+
   setTimeout(() => {
     headerWrap.firstElementChild.classList.remove('remove-logo');
     headerWrap.lastElementChild.classList.remove('remove-menu');
     headerWrap.parentElement.classList.remove('remove-header');
     footer.classList.remove('remove-footer');
     footer.firstElementChild.classList.remove('remove-footer-wrap');
+
+    if (burgerBtn) {
+      burgerBtn.classList.remove('remove-burger-btn');
+    }
   }, 2800);
 }
 
