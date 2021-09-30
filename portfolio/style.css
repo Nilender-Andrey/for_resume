@@ -307,28 +307,33 @@ h3 {
 }
 .section__btn_span-right {
   right: -70px;
+  pointer-events: none;
 }
 
 .section__btn_span-left {
   left: -100px;
+  pointer-events: none;
 }
 
 .section__btn_right:hover .section__btn_span-right {
   color: white;
   background-color: #ed8936;
-  right: 85px;
+  right: 75px;
   transition: all 0.3s linear;
+  pointer-events: auto;
 }
 
 .section__btn_left:hover .section__btn_span-left {
   color: white;
   background-color: #ed8936;
-  left: 30px;
+  left: 20px;
   transition: all 0.3s linear;
+  pointer-events: auto;
 }
 
 .section__btn_right:hover .section__btn_span-right--contacts {
-  right: 110px;
+  right: 100px;
+  pointer-events: auto;
 }
 
 .page-content {
