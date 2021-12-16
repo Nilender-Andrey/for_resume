@@ -113,8 +113,15 @@ h3 {
   border-radius: 50%;
   color: var(--hover-сolor);
   font-size: 40px;
+  text-decoration: none;
 
   transition: left 0.6s linear 0.6s;
+
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  color: white;
 }
 
 .remove-logo {
