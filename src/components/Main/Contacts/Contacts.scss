@@ -1,0 +1,13 @@
+@import './../../../colors';
+
+.list__icon {
+  &_place {
+    background-image: url('./../../../assets/1.svg');
+  }
+  &_email {
+    background-image: url('./../../../assets/2.svg');
+  }
+  &_github {
+    background-image: url('./../../../assets/3.svg');
+  }
+}

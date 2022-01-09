@@ -1,0 +1,17 @@
+@import './../../../_colors';
+
+.list__icon {
+  &_ru,
+  &_eng {
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  &_eng {
+    background-image: url('./../../../assets/eng.png');
+  }
+  &_ru {
+    background-image: url('./../../../assets/ru.png');
+  }
+}

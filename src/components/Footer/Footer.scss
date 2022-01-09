@@ -1,0 +1,39 @@
+@import './../../_colors';
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0 20px;
+  max-width: $MAX_WIDTH;
+  height: 60px;
+
+  border-radius: 5px 5px 0 0;
+  background-color: $BG_COLOR_LIGHT;
+
+  -webkit-box-shadow: $BOX_SHADOW_DARK;
+  -moz-box-shadow: $BOX_SHADOW_DARK;
+  box-shadow: $BOX_SHADOW_DARK;
+}
+
+.footer_position {
+  margin: 40px auto 0;
+}
+
+.course-logo {
+  display: block;
+
+  padding: 12px 0;
+  height: inherit;
+
+  &__img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 0 3px;
+  }
+}

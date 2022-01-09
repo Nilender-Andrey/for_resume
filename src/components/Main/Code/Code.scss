@@ -1,0 +1,32 @@
+@import './../../../colors';
+
+.code {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+
+  padding: 20px;
+
+  border-radius: 5px;
+
+  background-color: $BG_COLOR_DARK;
+
+  -webkit-box-shadow: $BOX_SHADOW_GREY_INSET;
+  -moz-box-shadow: $BOX_SHADOW_GREY_INSET;
+  box-shadow: $BOX_SHADOW_GREY_INSET;
+
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .code {
+    padding: 10px 5px;
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 640px) {
+  #code {
+    display: none;
+  }
+}

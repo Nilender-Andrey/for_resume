@@ -1,0 +1,83 @@
+@import './../../../colors';
+
+.burger-nav {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  z-index: 100;
+
+  display: none;
+
+  width: 100%;
+  height: 320px;
+  max-width: 200px;
+
+  border-radius: 5px;
+  background-color: $BG_COLOR_LIGHT;
+
+  -webkit-box-shadow: $BOX_SHADOW_DARK;
+  -moz-box-shadow: $BOX_SHADOW_DARK;
+  box-shadow: $BOX_SHADOW_DARK;
+
+  transition: right 1s;
+
+  &_not-visible {
+    right: -250px;
+    transition: right 1s;
+  }
+}
+
+.burger-nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+
+  list-style-type: none;
+}
+.burger-nav-list__item {
+  position: relative;
+}
+
+.burger-nav-list__link {
+  display: block;
+
+  padding: 6px;
+
+  color: $LINK_NAV_COLOR;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: $HOVER_COLOR_NAV;
+    transition: width linear 0.5s;
+  }
+  &:hover {
+    color: $HOVER_COLOR_NAV;
+  }
+
+  &:hover::before {
+    left: 0;
+
+    width: 85%;
+    margin-left: 7.5%;
+
+    transition: width linear 0.5s;
+  }
+}
+
+@media (max-width: 640px) {
+  .burger-nav {
+    display: block;
+  }
+}

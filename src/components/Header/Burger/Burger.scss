@@ -1,0 +1,70 @@
+@import './../../../colors';
+
+.burger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+
+  display: none;
+
+  width: 50px;
+  height: 35px;
+
+  cursor: pointer;
+  transition: right 0.6s linear 0.6s;
+}
+
+.burger::before,
+.burger::after,
+.burger span {
+  position: absolute;
+  left: 0;
+  height: 15%;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  border-radius: 5px;
+  background-color: $BURGER;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+}
+
+.burger::before {
+  top: 0;
+}
+.burger::after {
+  bottom: 0;
+}
+.burger:hover::before {
+  top: 5px;
+}
+.burger:hover::after {
+  bottom: 5px;
+}
+
+.burger span {
+  top: 50%;
+  transform: scale(1) translate(0px, -50%);
+}
+.burger.active span {
+  transform: scale(0) translate(0px, -50%);
+}
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+  background-color: $BURGER;
+}
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+  background-color: $BURGER;
+}
+
+@media (max-width: 640px) {
+  .burger {
+    display: block;
+  }
+}

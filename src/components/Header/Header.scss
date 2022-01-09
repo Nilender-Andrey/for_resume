@@ -1,0 +1,155 @@
+@import './../../colors';
+
+.nav {
+  padding: 10px;
+
+  border-radius: 30px;
+  background-color: $BG_COLOR_DARK;
+
+  &_horizontally {
+    position: relative;
+    z-index: 10;
+
+    margin: 15px -55px 40px auto;
+
+    width: 700px;
+    transition: transform 1s;
+    transform-origin: 100% 100%;
+    transform: rotate(0deg);
+
+    -webkit-box-shadow: $BOX_SHADOW_DARK;
+    -moz-box-shadow: $BOX_SHADOW_DARK;
+    box-shadow: $BOX_SHADOW_DARK;
+  }
+
+  &_vertically {
+    position: fixed;
+    z-index: 10;
+    top: -40px;
+    right: 10px;
+
+    margin: 10px 10px 0 0;
+    width: 750px;
+    transform-origin: 100% 100%;
+    transition: transform 1s;
+    transform: rotate(-90deg);
+
+    -webkit-box-shadow: $BOX_SHADOW_DARK_VERTICALLY;
+    -moz-box-shadow: $BOX_SHADOW_DARK_VERTICALLY;
+    box-shadow: $BOX_SHADOW_DARK_VERTICALLY;
+  }
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style-type: none;
+}
+
+.nav-list__item {
+  position: relative;
+}
+
+.nav-list__link {
+  color: $LINK_NAV_COLOR;
+  text-decoration: none;
+  padding: 9px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: $HOVER_COLOR_NAV;
+    transition: width linear 0.5s;
+  }
+
+  &:hover::before {
+    left: 0;
+
+    width: 85%;
+    margin-left: 7.5%;
+
+    transition: width linear 0.5s;
+  }
+}
+
+.nav-list__arrow {
+  padding: 5px;
+  margin-right: 10px;
+
+  border: 1px solid $TEXT_COLOR;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: $HOVER;
+    border: 1px solid $HOVER;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav {
+    &_vertically {
+      right: 5%;
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .nav_vertically {
+    right: -7px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    padding: 10px;
+    &_horizontally {
+      width: 640px;
+      margin: 15px -50px 40px auto;
+    }
+
+    &_vertically {
+      width: 680px;
+      right: -6px;
+    }
+  }
+  .nav-list__arrow {
+    font-size: 16px;
+  }
+
+  .nav-list__link {
+    padding: 9px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav {
+    font-size: 16px;
+    padding: 5px;
+    &_horizontally {
+      width: 580px;
+      margin: 15px -40px 40px auto;
+    }
+
+    &_vertically {
+      width: 620px;
+    }
+  }
+
+  .nav-list__link {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: none;
+  }
+}

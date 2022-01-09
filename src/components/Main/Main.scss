@@ -1,0 +1,28 @@
+@import './../../_colors';
+
+.main {
+  margin: 0 auto;
+  max-width: $MAX_WIDTH;
+  padding: 20px 20px 40px 0;
+
+  border-radius: 5px;
+  background-color: $BG_COLOR_DARK;
+
+  -webkit-box-shadow: $BOX_SHADOW_DARK;
+  -moz-box-shadow: $BOX_SHADOW_DARK;
+  box-shadow: $BOX_SHADOW_DARK;
+}
+
+@media (max-width: 1000px) {
+  .main {
+    padding: 0 5px 5px 0;
+  }
+}
+@media (max-width: 640px) {
+  .main {
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
